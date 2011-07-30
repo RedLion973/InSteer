@@ -1,0 +1,197 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	display: block;
+}
+
+body {
+	background-color: #F7F7F7;
+	color: #000000;
+	font: normal normal normal 12px/1.4em Verdana, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+a img {
+	border: none;
+}
+
+a:link, a:visited {
+	color: #FE6DFE;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	margin-top: 0.5em;
+}
+
+.centered_div {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.shadow {
+	-moz-box-shadow: 0px 5px 5px #555555;
+	-webkit-box-shadow: 0px 5px 5px #555555;
+	box-shadow: 0px 5px 5px #555555;
+}
+
+.shadow_inner {
+	-moz-box-shadow: inset 0 0 5px 5px #555555;
+	-webkit-box-shadow: inset 0 0 5px 5px #555555;
+	box-shadow: inset 0 0 5px 5px #555555;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.green {
+	color: #25963A;
+}
+
+.label {
+	text-align: right;
+	padding-right: 1em;
+	font-weight: bold;
+}
+
+.field  input {
+	text-align: center;
+	padding: 0.2em;
+}
+
+.submit_button {
+	text-align: center;
+	padding-top: 1.2em;
+}
+.submit_button input {
+	font-size: 0.8em;
+	padding: 0.7em 5em;
+	text-align: center; 
+	font-style: italic;
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	background-color: #FE6DFE;
+	font-weight: bold;
+	min-width: 60%;
+}
+.submit_button input:hover {
+	cursor: pointer;
+	color: #FE6DFE;
+	border: 1px solid #FE6DFE;
+	background-color: #FFF0FF;
+}
+
+.error {
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #25963A;
+	padding: 1.2em;
+}
+
+.list {
+	list-style: inside;
+}
+
+.empty_list {
+	font-weight: bold;
+	font-size: 0.8em;
+	list-style-type: none;
+	padding-left: 2em;
+}
+
+#header {
+	position: absolute;
+	background-color: #000000;
+	width: 100%;
+	color: #FFFFFF;
+	z-index: 2;
+}
+#header div {
+	padding: 15px;
+}
+
+#nav_bar {
+	background-color: #888888;
+	color: #FFFFFF;
+	width: 100%;
+	padding: 5px;
+	position: absolute;
+	top: 102px;
+	z-index: 1;
+	min-height: 25px;
+}
+#nav_bar ul {
+	list-style: none;
+}
+#nav_bar ul li {
+	display: inline;
+	padding-right: 5px;
+}
+
+#wrapper {
+	background-color: #FFFFFF;
+	min-height: 250px;
+	padding: 25px;
+	padding-top: 180px;
+	z-index: 1;
+}
+
+#main {
+	padding: 15px;
+}
+#main h1 {
+	font-style: italic; 
+}
+#main h1 img {
+	vertical-align: middle; 
+}
+
+#contextual_actions_menu {
+	float: right;
+	padding: 15px;
+	text-align: right;
+	font-weight: bold;
+	border-style: dashed;
+	border: 2px dashed #555555;
+	width: 165px; 
+}
+#contextual_actions_menu ul {
+	list-style: none;
+}
+#contextual_actions_menu ul li {
+	padding-right: 15px;
+	background: url('../img/InSteer_Bullet.png') right no-repeat;
+	min-height: 10px;
+	font-size: 0.8em;
+}
+
+#footer {
+	padding: 30px;
+	text-align: center;
+	font-size: 0.9em;
+}
+#footer p {
+	text-align: center;
+	color: #888888;
+}
+
+#footer_decorator {
+	background-color: #FFFFFF;
+	padding: 10px;
+	text-align: center;
+	width: 50px;
+	margin: 0 auto;
+}
+#footer_decorator img {
+	vertical-align: middle;
+}

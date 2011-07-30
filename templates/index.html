@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+
+{% block page_title %}Accueil{% endblock %}
+
+{% block content_title %}Accueil{% endblock %}
+
+{% block content %}
+	{% if user.is_authenticated %}
+	<p>Bienvenue <span class="bold">{{ user.get_full_name }}</span>,</p>
+	<p>Vos projets :</p>
+	<ul class="list">
+	{% for project in params.projects_list %}
+		{% for actor in project.projectactor_set.all %}
+			{% if actor.user = user %}
+			<li>{{ project }}</li>
+			{% endif %}
+		{% endfor %}
+	{% empty %}
+		<li class="empty_list">Aucun</li>
+	{% endfor %}
+	</ul>
+	{% else %}
+	<p>Bienvenue sur <span class="bold">InSteer</span>,</p>
+	<p>Veuillez vous authentifier afin d'accéder aux fonctionnalités de <span class="bold">gestion de projet</span>.</p>
+	{% endif %}
+{% endblock %}
+
+{% block contextual_actions_menu %}
+	{% if user.is_authenticated %}
+	<li><a href="{% url logout %}">Déconnexion</a></li>
+	<li><a href="#">Nouveau projet</a></li>
+	<li><a href="#">Mes projets</a></li>
+	<li><a href="#">Recheche</a></li>
+		{% if user.is_staff %}
+		<li><a href="/admin/">Administration</a></li>
+		{% endif %}		
+	{% else %}
+	<li><a href="{% url login %}">Connexion</a></li>
+	{% endif %}
+{% endblock %}
